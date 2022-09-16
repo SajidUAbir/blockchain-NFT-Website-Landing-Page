@@ -1,0 +1,183 @@
+:root {
+  --primary: #1E1629;
+  --secondary: #F81DFB;
+  --white: #fff;
+  --black: #000;
+  --gradient: linear-gradient(to left, #F81DFB, #fff);
+  --alpha: #fff1;
+  --ff1: 'Oxanium', cursive;
+  --ff2:'Lato', sans-serif;
+  --light: 400;
+  --normal: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1320px;
+    width: 90%;
+}
+
+/* ================
+  Nav
+================ */
+.nav {
+  background: none;
+  position: absolute;
+  padding: 41px 0;
+  width: 100%;
+  z-index: 99;
+}
+
+nav .brand-logo {
+	position: relative;
+}
+
+.nav__menu--text {
+  background: linear-gradient(var(--alpha), var(--primary));
+  text-transform: uppercase;
+}
+
+.nav .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+	-webkit-box-shadow: none;
+}
+
+/* ================
+  Banner
+================ */
+.banner {
+  background: #1E1629;
+  padding: 268px 0 480px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner__heading {
+  font-family: var(--ff1);
+  font-weight: var(--semibold);
+  font-size: 64px;
+}
+.banner__text {
+  font-family: var(--ff2);
+  font-weight: var(--light);
+  font-size: 25px;
+  padding: 40px 0 120px;
+}
+
+.banner__text--color {
+  color: var(--white);
+}
+
+.banner__images {
+  position: relative;
+}
+
+.banner__imgOne,
+.banner__imgTwo,
+.banner__imgThree {
+  background: var(--alpha);
+  border-radius: 41.67px;
+  width: 50%;
+  text-align: center;
+  padding: 20px 16px 0;
+  backdrop-filter: blur(17.915px);
+  position: absolute;
+  
+}
+
+.banner__imgOne {
+  left: 0;
+}
+.banner__imgTwo {
+  left: 166px;
+  top: -82px;
+  z-index: 3;
+}
+.banner__imgThree {
+  right: -10%;
+  top: 146px;
+  z-index: 2;
+}
+
+.banner__cardHeading {
+  font-family: var(--ff1);
+  font-weight: var(--medium);
+  font-size: 25px;
+  padding-top: 16px;
+}
+
+.banner__cardText {
+  font-family: var(--ff1);
+  font-weight: var(--medium);
+  font-size: 17px;
+  padding: 8px 0 20px;
+}
+
+.banner::after {
+  background: url(../images/Milky\ Way.png) no-repeat;
+  content: '';
+  position: absolute;
+  bottom: -680px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.banner__buttonOne {
+  color: #fff;
+  height: 70px;
+  width: 270px;
+  padding: 21px 30px;
+  border: 1px solid var(--secondary);
+  margin-right: 20px;
+  font-family: var(--ff1);
+  font-weight: var(--medium);
+  font-size: 22px;
+  position: relative;
+  transition: 0.5s;
+}
+.banner__buttonOne:hover {
+  background: var(--secondary);
+  border: 1px solid transparent;
+
+}
+
+.banner__buttonOne::before {
+  background: var(--secondary);
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -3px;
+  width: 2px;
+  height: 60%;
+  transition: 0.3s;
+}
+
+.banner__buttonOne::after {
+  background: var(--secondary);
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -3px;
+  width: 2px;
+  height: 60%;
+  transition: 0.3s;
+}
+
+.banner__buttonOne:hover::before{
+  left: 0px;
+  background: white;
+}
+.banner__buttonOne:hover::after{
+  right: 0px;
+  background: white;
+}
